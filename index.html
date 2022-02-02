@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+        <body>
+            <div id="game-container">
+                <div id='grid'>
+
+                </div>
+                <div id='start-screen'>
+                    <p>Press Play To Start</p>
+                    <button class='start-button'>Play</button>
+                </div>
+            </div>
+        </body>
+        <script src='./index.js'></script>
+
+
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            #game-container {
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #grid {
+                flex-wrap: wrap;
+                display: flex;
+                width: 500px;
+                height: auto;
+            }
+
+            #grid .box::before {
+                content: ' ';
+                display: block;
+                padding-top: 100% 
+            }
+
+            #grid .box {
+                box-sizing: border-box;
+                height: auto;
+                border: 1px solid pink;
+            } 
+
+            #grid .box.playerCell {
+                background-color: red;
+            }
+            #grid .box.foodCell {
+                background-color: green;
+            }
+
+            #start-screen {
+
+            }
+
+            .hide {
+                display: none
+            }
+        </style>
+</html>
